@@ -41,7 +41,7 @@ export default class Card extends Component {
     /** Applies a shadow to the card */
     shadow: PropTypes.bool,
     /** Increases/decreases the size of the card */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
   };
 
   static defaultProps = {
