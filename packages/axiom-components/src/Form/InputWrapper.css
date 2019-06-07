@@ -49,6 +49,14 @@
   flex-shrink: 0;
 }
 
+.ax-input__wrapper--inline .ax-input__hint-wrapper {
+  align-items: center;
+}
+
+.ax-input__wrapper--inline .ax-input__hint {
+  margin-left: var(--spacing-grid-size--x1);
+}
+
 .ax-input__wrapper--target .ax-input {
   cursor: pointer;
 }

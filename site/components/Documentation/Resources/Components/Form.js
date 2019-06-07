@@ -42,6 +42,20 @@ export default class Documentation extends Component {
                   onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
                   placeholder="Write in me"
                   size="medium"/>
+              <TextInput
+                  inlineLabel
+                  label="An inline label"
+                  onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                  placeholder="Write in me"
+                  size="medium"><TextInputIcon align="left" name="magnify-glass" tooltip={ getTextInputIconTooltip() } /></TextInput>
+              <TextInput
+                  inlineLabel
+                  label="Lorem Ipsum"
+                  onChange={ (setValue, getValue, event) => setValue('TextInput', 'value', event.target.value) }
+                  onClear={ (setValue) => setValue('TextInput', 'value', '') }
+                  placeholder="Write in me"
+                  size="medium"
+                  usageHint="This is a usage hint" />
             </DocumentationShowCase>
           </GridCell>
 

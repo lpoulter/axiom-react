@@ -73,7 +73,7 @@ export default class InputWrapper extends Component {
               {
                 usageHint && (
                   <div className="ax-input__hint">
-                    <UsageHintComponent position={ usageHintPosition } >
+                    <UsageHintComponent position={ usageHintPosition }>
                       { usageHint }
                     </UsageHintComponent>
                   </div>
