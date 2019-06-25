@@ -23,10 +23,10 @@ export default class LogoHorizontal extends Component {
           viewBoxWidth={ viewBoxWidth }
           width={ width }>
         <svg height="100%"
-             viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` }
-             width="100%"
-             x="0%"
-             y="0%">
+            viewBox={ `0 0 ${viewBoxWidth} ${viewBoxHeight}` }
+            width="100%"
+            x="0%"
+            y="0%">
           <g transform="scale(0.66662615037)">
             <path className="Anon-3" d="M0,13.667V25.493l13.821,6.519L27.955,17.141,18.688.256a4.893,4.893,0,0,0-.869.391L2.431,9.48A4.831,4.831,0,0,0,0,13.667Z"/>
             <polygon className="Anon-2" points="13.821 32.012 30.486 39.872 38.049 35.531 27.955 17.141 13.821 32.012"/>
