@@ -2,34 +2,35 @@
   max-width: 100%;
 }
 
+/* Update to logo colour vars */
 .cls-1 {
-  fill: #fff;
+  fill: rgb(255, 255, 255);
 }
 
 .cls-2 {
-  fill: #3f3f3f;
+  fill: rgb(63, 63, 63);
 }
 
 .Anon-3 {
-  fill: #57b7dd;
+  fill: rgb(87, 183, 221);
 }
 
 .Anon-2 {
-  fill: #f99132;
+  fill: rgb(249, 145, 50);
 }
 
 .Anon-5 {
-  fill: #a98bbc;
+  fill: rgb(169, 139, 188);
 }
 
 .Anon-4 {
-  fill: #ff6d56;
+  fill: rgb(255, 109, 86);
 }
 
 .Anon-12102 {
-  fill: #8ac539;
+  fill: rgb(138, 197, 57);
 }
 
 .cls-3 {
-  fill: #ffbe0a;
+  fill: rgb(255, 190, 10);
 }
