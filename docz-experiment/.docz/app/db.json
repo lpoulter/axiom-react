@@ -1,0 +1,205 @@
+{
+  "config": {
+    "title": "Docz Experiment",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [],
+  "props": [
+    {
+      "key": "src/components/Button/Button.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Button",
+          "methods": [],
+          "actualName": "Button",
+          "props": {
+            "active": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "Apply active styling"
+            },
+            "children": {
+              "type": {
+                "name": "node"
+              },
+              "required": true,
+              "description": "Content inserted into the Button"
+            },
+            "color": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'accent'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'negative'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'positive'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "Color of the button",
+              "defaultValue": {
+                "value": "'accent'",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "Disable interaction behaviour"
+            },
+            "full": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "true",
+                    "computed": false
+                  },
+                  {
+                    "value": "'small'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'medium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'large'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "Controls the full width appearance of the badge either all of the time,\nwith a value of `true` otherwise at one of the breakpoints specified."
+            },
+            "joinedLeft": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "Forces button to loose it's rounded styling on the left side"
+            },
+            "joinedRight": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "Forces button to loose it's rounded styling on the right side"
+            },
+            "shape": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'circle'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'rectangle'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'stadium'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "Shape of the button",
+              "defaultValue": {
+                "value": "'rectangle'",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'small'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'medium'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'large'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'huge'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "Size of standard shape",
+              "defaultValue": {
+                "value": "'medium'",
+                "computed": false
+              }
+            },
+            "style": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'primary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'secondary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'tertiary'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'quaternary'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "Style of the Button, which affects its coloring and sizing",
+              "defaultValue": {
+                "value": "'primary'",
+                "computed": false
+              }
+            }
+          },
+          "context": {
+            "joined": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
