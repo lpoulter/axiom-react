@@ -4,9 +4,21 @@ import Button from './Button';
 import styleguide from './styleguide.md';
 
 storiesOf('Button', module)
-    .add('With Text',
-        () => <Button>Hello Button</Button>,
+    .addParameters({
+        info: {
+            text: styleguide
+        }
+    })
+    .add('Styles',
+        () => (
+            <div>
+                <Button>Hello Button</Button>
+                <Button style='secondary'>Hello Button</Button>
+                <Button style='tertiary'>Hello Button</Button>
+                <Button style='quarternary'>Hello Button</Button>
+            </div>
+        ),
         {
             notes: {markdown: styleguide}
         }
-    );
+    )
