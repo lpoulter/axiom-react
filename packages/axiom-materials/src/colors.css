@@ -316,9 +316,9 @@
   --color-social-twitter: rgb(var(--rgb-social-twitter));
   --color-social-twitter--hover: rgb(var(--rgb-social-twitter--hover));
 
-  --rgb-social-facebook--active: 48, 77, 140;
-  --rgb-social-facebook: 59, 89, 152;
-  --rgb-social-facebook--hover: 73, 102, 166;
+  --rgb-social-facebook--active: 11, 106, 230;
+  --rgb-social-facebook: 23, 118, 242;
+  --rgb-social-facebook--hover: 38, 132, 255;
 
   --color-social-facebook--active: rgb(var(--rgb-social-facebook--active));
   --color-social-facebook: rgb(var(--rgb-social-facebook));
@@ -331,6 +331,46 @@
   --color-social-instagram--active: rgb(var(--rgb-social-instagram--active));
   --color-social-instagram: rgb(var(--rgb-social-instagram));
   --color-social-instagram--hover: rgb(var(--rgb-social-instagram--hover));
+
+  --rgb-social-four-chan--active: 224, 153, 117;
+  --rgb-social-four-chan: 238, 170, 136;
+  --rgb-social-four-chan--hover: 250, 187, 155;
+
+  --color-social-four-chan--active: rgb(var(--rgb-social-four-chan--active));
+  --color-social-four-chan: rgb(var(--rgb-social-four-chan));
+  --color-social-four-chan--hover: rgb(var(--rgb-social-four-chan--hover));
+
+  --rgb-social-reddit--active: 225, 61, 0;
+  --rgb-social-reddit: 255, 69, 0;
+  --rgb-social-reddit--hover: 255, 87, 25;
+
+  --color-social-reddit--active: rgb(var(--rgb-social-reddit--active));
+  --color-social-reddit: rgb(var(--rgb-social-reddit));
+  --color-social-reddit--hover: rgb(var(--rgb-social-reddit--hover));
+
+  --rgb-social-tumblr--active: 41, 57, 79;
+  --rgb-social-tumblr: 53, 70, 93;
+  --rgb-social-tumblr--hover: 65, 82, 105;
+
+  --color-social-tumblr--active: rgb(var(--rgb-social-tumblr--active));
+  --color-social-tumblr: rgb(var(--rgb-social-tumblr));
+  --color-social-tumblr--hover: rgb(var(--rgb-social-tumblr--hover));
+
+  --rgb-social-vk--active: 61, 105, 156;
+  --rgb-social-vk: 74, 118, 168;
+  --rgb-social-vk--hover: 89, 132, 181;
+
+  --color-social-vk--active: rgb(var(--rgb-social-vk--active));
+  --color-social-vk: rgb(var(--rgb-social-vk));
+  --color-social-vk--hover: rgb(var(--rgb-social-vk--hover));
+
+  --rgb-social-youtube--active: 209, 0, 0;
+  --rgb-social-youtube: 222, 0, 0;
+  --rgb-social-youtube--hover: 226, 0, 0;
+
+  --color-social-youtube--active: rgb(var(--rgb-social-youtube--active));
+  --color-social-youtube: rgb(var(--rgb-social-youtube));
+  --color-social-youtube--hover: rgb(var(--rgb-social-youtube--hover));
 
   --rgb-better-together: 240, 78, 78;
 

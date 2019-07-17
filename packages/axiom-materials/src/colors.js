@@ -163,13 +163,33 @@ export const socialTwitterActive = { r: 16, g: 148, b: 230 };
 export const socialTwitter = { r: 29, g: 161, b: 242 };
 export const socialTwitterHover = { r: 43, g: 174, b: 255 };
 
-export const socialFacebookActive = { r: 48, g: 77, b: 140 };
-export const socialFacebook = { r: 59, g: 89, b: 152 };
-export const socialFacebookHover = { r: 73, g: 102, b: 166 };
+export const socialFacebookActive = { r: 11, g: 106, b: 230 };
+export const socialFacebook = { r: 23, g: 118, b: 242 };
+export const socialFacebookHover = { r: 38, g: 132, b: 255 };
 
 export const socialInstagramActive = { r: 171, g: 58, b: 133 };
 export const socialInstagram = { r: 183, g: 71, b: 146 };
 export const socialInstagramHover = { r: 196, g: 86, b: 160 };
+
+export const socialFourChanActive = { r: 224, g: 153, b: 117 };
+export const socialFourChan = { r: 238, g: 170, b: 136 };
+export const socialFourChanHover = { r: 250, g: 187, b: 155 };
+
+export const socialRedditActive = { r: 225, g: 61, b: 0 };
+export const socialReddit = { r: 255, g: 69, b: 0 };
+export const socialRedditHover = { r: 255, g: 87, b: 25 };
+
+export const socialTumblrActive = { r: 41, g: 57, b: 79 };
+export const socialTumblr = { r: 53, g: 70, b: 93 };
+export const socialTumblrHover = { r: 65, g: 82, b: 105 };
+
+export const socialVKActive = { r: 61, g: 105, b: 156 };
+export const socialVK = { r: 74, g: 118, b: 168 };
+export const socialVKHover = { r: 89, g: 132, b: 181 };
+
+export const socialYouTubeActive = { r: 209, g: 0, b: 0 };
+export const socialYouTube = { r: 222, g: 0, b: 0 };
+export const socialYouTubeHover = { r: 226, g: 0, b: 0 };
 
 export const betterTogether = { r: 240, g: 78, b: 78 };
 

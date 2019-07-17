@@ -116,7 +116,38 @@ export default class Documentation extends Component {
             <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-instagram)') } rgb={ colors.socialInstagram } />
             <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-instagram--hover)') } rgb={ colors.socialInstagramHover } />
           </ColorSet>
+
+          <ColorSet name="4chan">
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--active)') } rgb={ colors.socialFourChanActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan)') } rgb={ colors.socialFourChan } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--hover)') } rgb={ colors.socialFourChanHover } />
+          </ColorSet>
+
+          <ColorSet name="Reddit">
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--active)') } rgb={ colors.socialRedditActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan)') } rgb={ colors.socialReddit } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--hover)') } rgb={ colors.socialRedditHover } />
+          </ColorSet>
+
+          <ColorSet name="Tumblr">
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--active)') } rgb={ colors.socialTumblrActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan)') } rgb={ colors.socialTumblr } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--hover)') } rgb={ colors.socialTumblrHover } />
+          </ColorSet>
+
+          <ColorSet name="VK">
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--active)') } rgb={ colors.socialVKActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan)') } rgb={ colors.socialVK } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--hover)') } rgb={ colors.socialVKHover } />
+          </ColorSet>
+
+          <ColorSet name="YouTube">
+            <ColorDot name="Active" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--active)') } rgb={ colors.socialYouTubeActive } />
+            <ColorDot name="Default" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan)') } rgb={ colors.socialYouTube } />
+            <ColorDot name="Hover" onClick={ () => this.copyColorToClipboard('var(--color-social-four-chan--hover)') } rgb={ colors.socialYouTubeHover } />
+          </ColorSet>
         </ColorGrid>
+
 
         <ColorGrid name="Sentiment Colours">
           <ColorSet name="Positive">
