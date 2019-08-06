@@ -82,7 +82,7 @@ export default class DatePickerContext extends Component {
               rangeSelect={ rangeSelect }
               selectedDate={ selectedDate }
               selectedEndDate={ selectedEndDate }
-              selectedStartDate={ selectedEndDate }
+              selectedStartDate={ selectedStartDate }
               view={ view } />
         </DropdownContent>
       </DropdownContext>
