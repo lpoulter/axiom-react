@@ -39,7 +39,7 @@
 
 .ax-chip-metric {
   margin-right: var(--spacing-grid-size--x1);
-  margin-left: -var(--spacing-grid-size--x1);
+  margin-left: var(--spacing-grid-size--x1);
   color: var(--color-theme-text--subtle);
 }
 
