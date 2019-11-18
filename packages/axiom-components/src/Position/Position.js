@@ -8,7 +8,7 @@ import { findComponent } from '@brandwatch/axiom-utils';
 import Portal from '../Portal/Portal';
 import { PositionSourceRef } from './PositionSource';
 import { PositionTargetRef } from './PositionTarget';
-import { placementToPosition, positionToPlacement, getPlacementFlipOrder } from './_utils';
+import { positionToPlacement, getPlacementFlipOrder } from './_utils';
 import './Position.css';
 
 /* eslint-disable react/no-find-dom-node */
@@ -84,9 +84,6 @@ export default class Position extends Component {
     super(props);
     this.handleOnCreate = this.handleOnCreate.bind(this);
     this.handleOnUpdate = this.handleOnUpdate.bind(this);
-    this.state = {
-      placement: positionToPlacement(props.position, props.offset),
-    };
   }
 
   componentDidMount() {
@@ -115,8 +112,8 @@ export default class Position extends Component {
   }
 
   createPopper() {
-    const { boundariesElement, flip, showArrow, reference } = this.props;
-    const { placement } = this.state;
+    const { boundariesElement, flip, showArrow, reference, position, offset } = this.props;
+    const placement = positionToPlacement(position, offset);
 
     return new popperJS(reference || this._target, this._content, {
       onCreate: this.handleOnCreate,
@@ -152,10 +149,7 @@ export default class Position extends Component {
     delete this._arrow;
     delete this._content;
 
-    const placement = positionToPlacement(this.props.position, this.props.offset);
-    if (placement !== this.state.placement) {
-      this.setState({ placement });
-    }
+
   }
 
   handleOnCreate(popper) {
@@ -168,23 +162,16 @@ export default class Position extends Component {
     }
   }
 
-  handleOnUpdate({ placement }) {
+  handleOnUpdate({ placement, originalPlacement }) {
     const { onPositionChange } = this.props;
-    const { placement: statePlacement } = this.state;
 
-    if (statePlacement !== placement) {
-      this.setState({ placement });
-
-      if (onPositionChange) {
-        onPositionChange(placement);
-      }
+    if (onPositionChange && placement !== originalPlacement) {
+      onPositionChange(placement);
     }
   }
 
   render() {
-    const { children, className, enabled, isVisible, onMaskClick, showArrow, reference, ...rest } = this.props;
-    const { placement } = this.state;
-    const [ position ] = placementToPosition(placement);
+    const { children, className, enabled, isVisible, onMaskClick, showArrow, reference, position, ...rest } = this.props;
 
     const classes = classnames('ax-position', {
       'ax-position--arrow': showArrow,
@@ -193,7 +180,6 @@ export default class Position extends Component {
     const props = omit(rest, [
       'flip',
       'offset',
-      'position',
       'onPositionChange',
     ]);
 
