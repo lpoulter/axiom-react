@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import omit from 'lodash.omit';
 import classnames from 'classnames';
 import { importCssVariables } from '@brandwatch/axiom-materials';
 import './globals.css';
@@ -209,7 +210,7 @@ export default class Base extends Component {
     }
 
     return (
-      <Component { ...rest } className={ classes } ref={ baseRef } />
+      <Component { ...omit(rest, ['inputRef']) } className={ classes } ref={ baseRef } />
     );
   }
 }

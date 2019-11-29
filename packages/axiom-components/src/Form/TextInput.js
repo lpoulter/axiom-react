@@ -106,6 +106,7 @@ export default class TextInput extends Component {
 
   render() {
     const {
+      baseRef,
       children,
       disabled,
       error,
@@ -143,7 +144,7 @@ export default class TextInput extends Component {
           required={ required }
           value={ value }>
         { (isValid) =>
-          <Base className="ax-input__container" space={ space }>
+          <Base baseRef={ baseRef } className="ax-input__container" space={ space }>
             <InputWrapper
                 disabled={ disabled }
                 hasFocus={ hasFocus }

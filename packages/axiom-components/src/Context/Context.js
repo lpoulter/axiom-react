@@ -8,6 +8,7 @@ import './Context.css';
 export default class Context extends Component {
   static propTypes = {
     arrowRef: PropTypes.func,
+    arrowStyle: PropTypes.object,
     children: PropTypes.node,
     className: PropTypes.string,
     color: PropTypes.oneOf(['success', 'warning', 'error', 'info', 'carbon', 'white']),
@@ -20,10 +21,12 @@ export default class Context extends Component {
     maxHeight: '30rem',
     position: 'top',
     width: '14.5rem',
+    arrowStyle: {},
   };
 
   render() {
     const {
+      arrowStyle,
       className,
       arrowRef,
       children,
@@ -40,10 +43,11 @@ export default class Context extends Component {
     const content = () => <div className="ax-context__content" style={ { maxHeight } }>
       { children }
     </div>;
+
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>
         { arrowRef ?
-          <Tip arrowRef={ arrowRef } color={ color } direction={ position } size="small">
+          <Tip arrowRef={ arrowRef } arrowStyle={ arrowStyle } color={ color } direction={ position } size="small" >
             { content() }
           </Tip> :
         content()

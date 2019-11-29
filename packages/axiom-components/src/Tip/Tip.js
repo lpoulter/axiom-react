@@ -26,11 +26,11 @@ export default class Tip extends Component {
     shadow: true,
     direction: 'top',
     size: 'medium',
+    arrowStyle: {},
   };
 
   getArrowStyles = () => {
     const { position, direction } = this.props;
-
     switch (direction) {
     case 'top':
     case 'bottom':
@@ -42,7 +42,7 @@ export default class Tip extends Component {
   };
 
   render() {
-    const { arrowRef, color, direction, position, children, shadow, size, ...rest } = this.props;
+    const { arrowRef, arrowStyle, color, direction, position, children, shadow, size, ...rest } = this.props;
 
     const classes = classnames(`ax-tip--${direction}`, {
       [`ax-tip--${color}`]: color,
@@ -53,10 +53,12 @@ export default class Tip extends Component {
       [`ax-tip__arrow--${size}`]: size,
     });
 
+    const arrowStyles = Object.assign({}, position ? this.getArrowStyles() : {}, arrowStyle);
+
     return (
       <Base className={ classes } { ...rest }>
-        <span className={ arrowClasses } ref={ arrowRef } style={ position ? this.getArrowStyles() : {} } />
-        <Base className="ax-tip__content">{ children }</Base>
+        <span className={ arrowClasses } ref={ arrowRef } style={ arrowStyles } />
+        <Base className="ax-tip__content" style={ arrowStyle }>{ children }</Base>
       </Base>
     );
   }
