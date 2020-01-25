@@ -15,11 +15,6 @@ module.exports = {
         './packages/axiom-materials/src/theme-day.css',
         './packages/axiom-materials/src/theme-night.css',
       ],
-      features: {
-        autoprefixer: {
-          grid: true,
-        },
-      },
     }),
   ],
 };
