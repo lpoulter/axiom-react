@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('postcss-cssnext')({
+    require('postcss-preset-env')({
       browsers: [
         ...require('@brandwatch/axiom-materials/browsers'),
         'IE 11',
