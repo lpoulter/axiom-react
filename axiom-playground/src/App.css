@@ -1,0 +1,4 @@
+.App {
+  /* You can import Axiom CSS varibles like this. */
+  padding: var(--spacing-grid-size--x6);
+}

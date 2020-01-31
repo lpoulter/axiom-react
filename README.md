@@ -82,6 +82,15 @@ yarn
 yarn start
 ```
 
+### Playground
+To build with Axiom and test new components you have made you can run
+
+```
+yarn start:playground
+```
+
+Before using the playground for now you will also have to build the packages with `yarn build:packages`.
+
 ### Contributing
 
 Please checkout the [CONTRIBUTING.md](./CONTRIBUTING.md) but basically we use the conventional commit format (google it) to handle automatic publishing, check tests and add them where appropriate and check linting.
