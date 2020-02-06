@@ -19,6 +19,7 @@ module.exports = {
         /site/,
         /node_modules\/get-own-enumerable-property-symbols/,
         /node_modules\/stringify-object/,
+        /node_modules\/flex-wrapper-react/,
       ],
     }, {
       test: /\.css$/,
