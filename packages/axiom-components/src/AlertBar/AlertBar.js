@@ -3,16 +3,20 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import AlertIcon from '../AlertIcon/AlertIcon';
 import Base from '../Base/Base';
-import Grid from '../Grid/Grid';
-import GridCell from '../Grid/GridCell';
 import Icon from '../Icon/Icon';
 import Link from '../Typography/Link';
+import Text from '../Typography/Text';
+
+import { Flex } from 'flex-wrapper-react';
 import './AlertBar.css';
+
 
 export default class AlertBar extends Component {
   static propTypes = {
     /** Content displayed next to the AlertIcon */
     children: PropTypes.node.isRequired,
+    /** SKIP */
+    className: PropTypes.string,
     /** An optional callback that when given adds a removable cross */
     onRemoveClick: PropTypes.func,
     /** Size of the AlertBar */
@@ -32,26 +36,23 @@ export default class AlertBar extends Component {
 
     return (
       <Base { ...rest } className={ classes }>
-        <Grid gutters="tiny" responsive={ false } verticalAlign="middle">
-          <GridCell shrink>
-            <AlertIcon
-                style="subtle"
-                theme="day"
-                type={ type } />
-          </GridCell>
+        <Flex alignItems="center" gap justifyContent="center">
 
-          <GridCell textColor="night" textStrong>
-            { children }
-          </GridCell>
+          <AlertIcon
+              className="flex-shrink"
+              style="subtle"
+              theme="day"
+              type={ type } />
+
+
+          <Text className="flex-grow" textColor="night" textStrong>{ children }</Text>
 
           { onRemoveClick && (
-            <GridCell shrink>
-              <Link onClick={ onRemoveClick } style="night">
-                <Icon name="cross" />
-              </Link>
-            </GridCell>
+            <Link className="flex-shrink" onClick={ onRemoveClick } style="night">
+              <Icon name="cross" />
+            </Link>
           ) }
-        </Grid>
+        </Flex>
       </Base>
     );
   }
