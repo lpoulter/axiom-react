@@ -3,6 +3,7 @@
   "version": "5.2.13",
   "description": "Brandwatch Axiom - Charting components",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

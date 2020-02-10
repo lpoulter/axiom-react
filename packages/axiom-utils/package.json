@@ -3,6 +3,7 @@
   "version": "0.1.41",
   "description": "Brandwatch Axiom - Utils",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"

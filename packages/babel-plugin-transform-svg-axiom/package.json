@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Brandwatch Axiom - Babel plugin to inline SVG files",
   "main": "dist/index.js",
+  "module": "dist/esmindex.js",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
