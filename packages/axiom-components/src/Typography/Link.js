@@ -11,6 +11,7 @@ export default class Link extends Component {
       PropTypes.func,
     ]),
     children: PropTypes.node,
+    className: PropTypes.string,
     style: PropTypes.oneOf([
       'body',
       'day',
@@ -28,8 +29,8 @@ export default class Link extends Component {
   };
 
   render() {
-    const { children, Component, style, ...rest } = this.props;
-    const classes = classnames('ax-link', {
+    const { className, children, Component, style, ...rest } = this.props;
+    const classes = classnames('ax-link', className, {
       [`ax-link--style-${style}`]: style,
     });
 

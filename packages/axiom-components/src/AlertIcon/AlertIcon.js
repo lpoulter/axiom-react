@@ -20,6 +20,7 @@ const SIZE_MAP = {
 
 export default class AlertIcon extends Component {
   static propTypes = {
+    className: PropTypes.string,
     /** Size of the indicator and icon */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     /** Style of the indicator */
@@ -35,8 +36,8 @@ export default class AlertIcon extends Component {
   };
 
   render() {
-    const { size, style, type, ...rest } = this.props;
-    const classes = classnames(
+    const { className, size, style, type, ...rest } = this.props;
+    const classes = classnames(className,
       'ax-alert-icon',
       `ax-alert-icon--${style}`,
       `ax-alert-icon--${size}`,
