@@ -11,29 +11,24 @@ export default class ButtonGroup extends Component {
     joined: PropTypes.bool,
   };
 
-  static childContextTypes = {
-    joined: PropTypes.bool,
-  };
-
-  getChildContext() {
-    return {
-      joined: this.props.joined,
-    };
-  }
-
   render() {
     const { children, joined, ...rest } = this.props;
 
+    const mappedChildren = React.Children.map(children, child => {
+      return React.cloneElement(child, {
+        joined,
+      });
+    });
+
     return (
-      <Base space="x6" { ...rest }
+      <Base
+          space="x6"
+          { ...rest }
           Component={ joined ? 'div' : InlineGroup }
           className="ax-button-group"
           textBreak={ joined ? 'none' : null }>
-        { children }
+        { mappedChildren }
       </Base>
     );
   }
 }
-
-
-

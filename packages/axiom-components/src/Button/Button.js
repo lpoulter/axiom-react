@@ -23,6 +23,8 @@ export default class Button extends Component {
      * with a value of `true` otherwise at one of the breakpoints specified.
      */
     full: PropTypes.oneOf([true, 'small', 'medium', 'large']),
+    /** SKIP */
+    joined: PropTypes.bool,
     /** Forces button to loose it's rounded styling on the left side */
     joinedLeft: PropTypes.bool,
     /** Forces button to loose it's rounded styling on the right side */
@@ -35,10 +37,6 @@ export default class Button extends Component {
     style: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   };
 
-  static contextTypes = {
-    joined: PropTypes.bool,
-  };
-
   static defaultProps = {
     color: 'accent',
     shape: 'rectangle',
@@ -47,13 +45,13 @@ export default class Button extends Component {
   };
 
   render() {
-    const { joined } = this.context;
     const {
       active,
       children,
       className,
       color,
       disabled,
+      joined,
       joinedLeft,
       joinedRight,
       shape,
