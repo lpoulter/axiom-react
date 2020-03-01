@@ -12,7 +12,7 @@ export default function AlertDialog({
   ...rest
 }) {
   return (
-    <Modal { ...rest } onOverlayClick={ onRequestClose } overlayShade={ null }>
+    <Modal { ...rest } onRequestClose={ onRequestClose } overlayShade={ null }>
       <Base className="ax-alert-dialog">
         <AlertDialogContext.Provider
             value={ {

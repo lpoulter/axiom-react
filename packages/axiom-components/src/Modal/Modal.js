@@ -19,7 +19,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   closeOnOverlayClick: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
-  onRequestClose: PropTypes.bool,
+  onRequestClose: PropTypes.func,
   overlayShade: PropTypes.oneOf(['shade-1', 'shade-2', 'shade-3', 'shade-4']),
   overlayTheme: PropTypes.oneOf(['day', 'night']),
   padding: PropTypes.oneOf(['x0', 'x6', 'x8', 'x12', 'x16']),
