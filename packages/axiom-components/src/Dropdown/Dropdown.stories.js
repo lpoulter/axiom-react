@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { select, withKnobs } from '@storybook/addon-knobs';
 import Dropdown from './Dropdown';
@@ -326,6 +327,12 @@ export function Position() {
 
   const position = select(positionLabel, positionOptions, positionDefaultValue);
 
+  const flipLabel = 'flip';
+  const flipOptions = ['anticlockwise', 'clockwise', 'mirror'];
+  const flipDefaultValue = 'clockwise';
+
+  const flip = select(flipLabel, flipOptions, flipDefaultValue);
+
   return (
     <div
         style={ {
@@ -335,7 +342,7 @@ export function Position() {
           alignItems: 'center',
           justifyContent: 'center',
         } }>
-      <Dropdown offset={ offset } position={ position } showArrow>
+      <Dropdown flip={ flip } offset={ offset } onPositionChange={ (position) => console.log('onPositionChange new position: ', position) } position={ position } showArrow>
         <DropdownTarget>
           <TextInput
               isTarget
