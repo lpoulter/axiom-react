@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
-import popperJS from 'popper.js';
+import { createPopper } from '@popperjs/core';
 import omit from 'lodash.omit';
 import classnames from 'classnames';
 import { findComponent } from '@brandwatch/axiom-utils';
@@ -77,7 +77,7 @@ export default class Position extends Component {
     flip: 'clockwise',
     offset: 'middle',
     position: 'top',
-    showArrow:  false,
+    showArrow: false,
   };
 
   constructor(props) {
@@ -102,8 +102,9 @@ export default class Position extends Component {
       if (!this._popper) {
         this._popper = this.createPopper();
       } else {
-        this._popper.options.placement = positionToPlacement(position, offset);
-        this._popper.update();
+        const placement = positionToPlacement(position, offset);
+        this._popper.setOptions({ placement });
+        this._popper.forceUpdate();
       }
     } else if (this._popper) {
       this.destroyPopper();
@@ -118,28 +119,50 @@ export default class Position extends Component {
     const { boundariesElement, flip, showArrow, reference } = this.props;
     const { placement } = this.state;
 
-    return new popperJS(reference || this._target, this._content, {
-      onCreate: this.handleOnCreate,
-      onUpdate: this.handleOnUpdate,
-      placement,
-      modifiers: {
-        arrow: {
+    const modifiers = [
+      {
+        name: 'afterWrite',
+        enabled: true,
+        phase: 'afterWrite',
+        fn: this.handleOnUpdate,
+      },
+      {
+        name: 'arrow',
+        options: {
           enabled: showArrow,
           element: this._arrow,
         },
-        flip: {
-          behavior: getPlacementFlipOrder(placement, flip),
+      },
+      {
+        name: 'flip',
+        options: {
+          fallbackPlacements: getPlacementFlipOrder(placement, flip),
         },
-        inner: {
-          enabled: false,
+      },
+      {
+        name: 'offset',
+        options: {
+          offset: () => {
+            if (showArrow) {
+              return [0, 15];
+            } else {
+              return [2, 2];
+            }
+          },
         },
-        offset: {
-          enabled: false,
-        },
-        preventOverflow: {
+      },
+      {
+        name: 'preventOverflow',
+        options: {
           boundariesElement,
         },
       },
+    ];
+
+    return createPopper(reference || this._target, this._content, {
+      onFirstUpdate: this.handleOnCreate,
+      placement,
+      modifiers,
     });
   }
 
@@ -161,14 +184,12 @@ export default class Position extends Component {
   handleOnCreate(popper) {
     const { onPositionChange } = this.props;
 
-    this.handleOnUpdate(popper);
-
     if (onPositionChange) {
       onPositionChange(popper.placement);
     }
   }
 
-  handleOnUpdate({ placement }) {
+  handleOnUpdate({ state: { placement } }) {
     const { onPositionChange } = this.props;
     const { placement: statePlacement } = this.state;
 
