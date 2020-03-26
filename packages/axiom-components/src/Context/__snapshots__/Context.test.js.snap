@@ -146,14 +146,13 @@ exports[`Context renders with arrowRef 1`] = `
   }
 >
   <div
-    className="ax-tip--top ax-tip--shadow"
+    className="ax-context-tip--top"
   >
     <span
-      className="ax-tip__arrow ax-tip__arrow--small"
-      style={Object {}}
+      className="ax-context-tip__arrow"
     />
     <div
-      className="ax-tip__content"
+      className="ax-context-tip__content"
     >
       <div
         className="ax-context__content"

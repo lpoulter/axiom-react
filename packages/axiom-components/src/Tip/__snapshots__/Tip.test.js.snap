@@ -160,26 +160,6 @@ exports[` 8`] = `
 </div>
 `;
 
-exports[`Tip renders with arrowRef 1`] = `
-<div
-  className="ax-tip--top ax-tip--shadow"
->
-  <span
-    className="ax-tip__arrow ax-tip__arrow--medium"
-    style={Object {}}
-  />
-  <div
-    className="ax-tip__content"
-  >
-    <div
-      className=""
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in risus sit amet dolor tempus ornare ac eget dolor. Pellentesque ultrices iaculis nunc, tempor tempus magna vehicula ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam iaculis quam ut metus finibus, et facilisis risus porta.
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Tip renders with defaultProps 1`] = `
 <div
   className="ax-tip--top ax-tip--shadow"

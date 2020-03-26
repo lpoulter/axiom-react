@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import Base from '../Base/Base';
-import Tip from '../Tip/Tip';
+import ContextTip from './ContextTip';
 import './Context.css';
 
 export default class Context extends Component {
@@ -43,9 +43,9 @@ export default class Context extends Component {
     return (
       <Base theme="day" { ...rest } className={ classes } style={ { width } }>
         { arrowRef ?
-          <Tip arrowRef={ arrowRef } color={ color } direction={ position } size="small">
+          <ContextTip color={ color } direction={ position } ref={ arrowRef }>
             { content() }
-          </Tip> :
+          </ContextTip> :
         content()
         }
       </Base>

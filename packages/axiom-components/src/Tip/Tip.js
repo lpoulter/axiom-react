@@ -6,8 +6,6 @@ import './Tip.css';
 
 export default class Tip extends Component {
   static propTypes = {
-    /** optional property which should be provided in case positioning of the tip is done using popperJs. If this value is true, the value of position prop will be ignored. */
-    arrowRef: PropTypes.func,
     /** The content on which the tip should be placed. */
     children: PropTypes.node,
     /** Background color for the tip */
@@ -42,7 +40,7 @@ export default class Tip extends Component {
   };
 
   render() {
-    const { arrowRef, color, direction, position, children, shadow, size, ...rest } = this.props;
+    const { color, direction, position, children, shadow, size, ...rest } = this.props;
 
     const classes = classnames(`ax-tip--${direction}`, {
       [`ax-tip--${color}`]: color,
@@ -55,7 +53,7 @@ export default class Tip extends Component {
 
     return (
       <Base className={ classes } { ...rest }>
-        <span className={ arrowClasses } ref={ arrowRef } style={ position ? this.getArrowStyles() : {} } />
+        <span className={ arrowClasses } style={ position ? this.getArrowStyles() : {} } />
         <Base className="ax-tip__content">{ children }</Base>
       </Base>
     );

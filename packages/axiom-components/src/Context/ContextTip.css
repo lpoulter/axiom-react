@@ -1,0 +1,36 @@
+:root {
+  --tip-size: 0.75rem;
+}
+
+.ax-context-tip__arrow {
+  width: var(--tip-size);
+  height: var(--tip-size);
+
+  @nest .ax-position[data-popper-placement*='top'] & { bottom: calc(var(--tip-size) * -0.5); }
+  @nest .ax-position[data-popper-placement*='bottom'] & { top: calc(var(--tip-size) * -0.5); }
+  @nest .ax-position[data-popper-placement*='left'] & { right: calc(var(--tip-size) * -0.5); }
+  @nest .ax-position[data-popper-placement*='right'] & { left: calc(var(--tip-size) * -0.5); }
+}
+
+.ax-context-tip__arrow::before {
+  content: '';
+  position: absolute;
+  width: var(--tip-size);
+  height: var(--tip-size);
+  transform: rotate(45deg);
+  box-shadow: var(--drop-shadow-theme-border), var(--drop-shadow-theme-elevation--x2);
+  background-color: var(--color-theme-background);
+  pointer-events: none;
+
+  @nest .ax-context-tip--faded & { background-color: var(--color-theme-text); }
+  @nest .ax-context-tip--success & { background-color: var(--color-ui-success); }
+  @nest .ax-context-tip--warning & { background-color: var(--color-ui-warning); }
+  @nest .ax-context-tip--error & { background-color: var(--color-ui-error); }
+  @nest .ax-context-tip--info & { background-color: var(--color-ui-info); }
+  @nest .ax-context-tip--shade-1 & { background-color: var(--color-theme-background--shade-1); }
+  @nest .ax-context-tip--shade-2 & { background-color: var(--color-theme-background--shade-2); }
+  @nest .ax-context-tip--shade-3 & { background-color: var(--color-theme-background--shade-3); }
+  @nest .ax-context-tip--shade-4 & { background-color: var(--color-theme-background--shade-4); }
+  @nest .ax-context-tip--carbon & { background-color: var(--color-ui-carbon); }
+  @nest .ax-context-tip--white & { background-color: var(--color-ui-white); }
+}

@@ -21,12 +21,6 @@ describe('Tip', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders with arrowRef', () => {
-    const arrowRef = () => {};
-    const tree = renderer.create(getComponent({ arrowRef : arrowRef() })).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('renders without shadow', () => {
     const tree = renderer.create(getComponent({ shadow : false })).toJSON();
     expect(tree).toMatchSnapshot();
