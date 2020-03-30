@@ -58,7 +58,12 @@
   height: var(--spacing-grid-size--x6);
   margin: 0 calc(var(--ax-slider-thumb-size--small) / 2);
 
-  & .ax-slider__track,
+  & .ax-slider__track {
+    top: 33%;
+    height: var(--ax-slider-track-size--small);
+    border-radius: var(--ax-slider-track-size--small);
+  }
+
   & .ax-slider__fill {
     height: var(--ax-slider-track-size--small);
     border-radius: var(--ax-slider-track-size--small);
