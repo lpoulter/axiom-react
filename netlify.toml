@@ -1,4 +1,4 @@
 # Global settings applied to the whole site.
 [build]
-  publish = "public"
+  publish = "storybook-static"
   command = "npm run netlify"
