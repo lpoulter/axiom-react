@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Icon/Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Review" transform="translate(2.000000, 3.000000)" fill="#000000">
-            <path d="M9.50798298,0 C10.6081436,0 11.5,0.895857811 11.5,1.9973917 L11.5,7.0026083 C11.5,8.10573727 10.5998238,9 9.50798298,9 L9,9 L6,12 L6,9 L2.49201702,9 C1.3918564,9 0.5,8.10414219 0.5,7.0026083 L0.5,1.9973917 C0.5,0.894262725 1.40017617,0 2.49201702,0 L9.50798298,0 Z M6,1 L5.25,3.25 L3,3.292 L4.738,4.7265 L3.9995,7 L6,5.643 L8,7 L7.262,4.7265 L8.9995,3.292 L6.7495,3.25 L6,1 Z" id="Shape"></path>
-        </g>
-    </g>
-</svg>
